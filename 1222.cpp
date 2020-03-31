@@ -1,0 +1,69 @@
+#include<iostream>
+class ARRAY
+{
+	public:
+
+	int OverflowCounter ;
+    int ElementCounter ;
+    int* AR;
+
+    ARRAY() : OverflowCounter(1), ElementCounter(0)
+    {
+        AR= create(1);
+    }
+
+
+    int* create(int OverflowCounter)
+    {
+        int* ar= new int[OverflowCounter*10];
+        return ar;
+        delete ar;
+    }
+
+
+    void overflow()
+    {
+        int* ar =create(++OverflowCounter);
+
+        for (int i=0 ; i<=ElementCounter ; i++)
+            *(ar+i)=*(AR+i);
+
+        *AR=*ar;
+        delete ar;
+
+    }
+
+
+    void Insert(int value)
+    {
+        if ( ElementCounter <= OverflowCounter * 10 )
+        {
+            *(AR+ElementCounter) = value;
+            ElementCounter++;
+        }
+        else
+            overflow();
+            *(AR+ElementCounter) = value;
+            ElementCounter++;
+
+    }
+
+
+    ~ARRAY()
+    {
+        delete AR ;
+    }
+};
+int main()
+{
+    std::cout<<"hi"<<std::endl;
+
+	ARRAY a;
+	a.Insert(1);
+
+	std::cout<<*(a.AR+1);//////////////////
+
+	a.Insert(10);
+
+    return 0;
+}
