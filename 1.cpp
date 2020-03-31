@@ -14,7 +14,7 @@ class myclass
      cin>>x;
      array[bottom] = x;
      bottom +=1;
-     if (bottom == 9)
+     if (bottom == 10)
      {
         array[20];
      }
