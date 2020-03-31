@@ -19,7 +19,7 @@ class myclass
         array[20];
      }
      int i;
-     cout<<"wanna add element again?"
+     cout<<"wanna add element again?";
      cin>>i;
      if (i == 1)
      {
