@@ -1,39 +1,24 @@
-#include<iostream>
-using namespace std;
-class myclass
-{
-    public:
-    int bottom = 0;
-    int array[10];
-    int add_elemnts(int a)
-    {
-     while (1)
-    {
-     int x;
-     cout<<"enter a number";
-     cin>>x;
-     array[bottom] = x;
-     bottom +=1;
-     if (bottom == 10)
-     {
-        array[20];
-     }
-     int i;
-     cout<<"wanna add element again?";
-     cin>>i;
-     if (i == 1)
-     {
-         continue;
-     }
-     else
-        break;
-        return x;
-     }
-};
 int main()
 {
- myclass arr;
- int a = arr.add_elemnts(10);
- cout<<a;
- return 0;
+    std::cout<<"hi"<<std::endl;
+
+	ARRAY a;
+	a.Insert(1);
+	a.Insert(2);
+	a.Insert(3);
+	a.Insert(3);
+	a.Insert(3);
+	a.Insert(3);
+	a.Insert(3);
+	a.Insert(3);
+	a.Insert(3);
+	a.Insert(3);
+    a.Insert(3);
+    for (int i=1;i<=a.ElementCounter;i++)
+    {
+        std::cout<<*(a.AR+i)<<"\n";//////////////////
+    }
+
+    return 0;
 }
+
