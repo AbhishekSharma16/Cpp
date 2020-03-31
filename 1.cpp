@@ -7,7 +7,7 @@ class myclass
     int array[10];
     int add_elemnts(int a)
     {
-     while (1<0)
+     while (1)
     {
      int x;
      cout<<"enter a number";
