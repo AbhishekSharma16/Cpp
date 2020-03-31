@@ -1,2 +1,2 @@
-# c-vec
+# c++
 creating vector
